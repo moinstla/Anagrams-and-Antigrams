@@ -14,4 +14,8 @@ describe('String#anagrams_antigrams') do
   it('checks if the inputted words are palindromes') do
     expect('desserts stressed'.anagrams_antigrams()).to(eq('These words are anagrams and palindromes'))
   end
+
+  it('checks if user inputted words') do
+    expect('xyz dog'.anagrams_antigrams()).to(eq('You need to input actual words'))
+  end
 end
