@@ -1,17 +1,16 @@
 class String
-  define_method(:anagrams_antigrams) do
-    inputted_words = self.downcase()
-    inputted_words_array = inputted_words.split()
-    word_one_array = inputted_words_array.first().split("").sort()
-    word_two_array = inputted_words_array.last().split("").sort()
-    vowel_array = ["a","e","i","o","u"]
+  define_method(:anagrams_antigrams) do |input_2|
+    input_1_array = self.downcase().split("")
+    input_2_array = (input_2).downcase().split("")
+    word_one_array = input_1_array.sort()
+    word_two_array = input_2_array.sort()
     intersection_array = word_one_array & word_two_array
 
-    if word_one_array.join().scan(/[aeiou]/).count.<(1).|word_one_array.join().scan(/[aeiou]/).count.<(1)
+    if self.scan(/[aeiouyAEIOUY]/).count.<(1) | input_2.scan(/[aeiouyAEIOUY]/).count.<(1)
       "You need to input actual words"
     elsif intersection_array.length() == 0
       "These words are antigrams"
-    elsif word_one_array.eql?(word_two_array) && inputted_words_array[0] == inputted_words_array[1].reverse()
+    elsif input_1_array.eql?(input_2_array.reverse())
     "These words are anagrams and palindromes"
     elsif word_one_array.eql?(word_two_array)
     "These words are anagrams"

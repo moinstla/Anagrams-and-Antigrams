@@ -4,22 +4,22 @@ require('pry')
 
 describe('String#anagrams_antigrams') do
   it('checks if two inputted words are anagrams of each other') do
-    expect('ruby bury'.anagrams_antigrams()).to(eq("These words are anagrams"))
+    expect("ruby".anagrams_antigrams("bury")).to(eq("These words are anagrams"))
   end
 
   it('checks if the inputted words are anagrams, regardless of cases') do
-    expect('ALERT later'.anagrams_antigrams()).to(eq("These words are anagrams"))
+    expect("alert".anagrams_antigrams("LATER")).to(eq("These words are anagrams"))
   end
 
   it('checks if the inputted words are palindromes') do
-    expect('desserts stressed'.anagrams_antigrams()).to(eq('These words are anagrams and palindromes'))
+    expect("desserts".anagrams_antigrams("stressed")).to(eq('These words are anagrams and palindromes'))
   end
 
   it('checks if user inputted words') do
-    expect('xyz dog'.anagrams_antigrams()).to(eq('You need to input actual words'))
+    expect('xz'.anagrams_antigrams("good")).to(eq('You need to input actual words'))
   end
 
   it('checks if words are antigrams') do
-    expect('dog cat'.anagrams_antigrams()).to(eq('These words are antigrams'))
+    expect('dog'.anagrams_antigrams('cat')).to(eq('These words are antigrams'))
   end
 end
