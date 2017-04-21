@@ -5,8 +5,12 @@ class String
     word_one_array = inputted_words_array.first().split("").sort()
     word_two_array = inputted_words_array.last().split("").sort()
     vowel_array = ["a","e","i","o","u"]
+    intersection_array = word_one_array & word_two_array
+
     if word_one_array.join().scan(/[aeiou]/).count.<(1).|word_one_array.join().scan(/[aeiou]/).count.<(1)
       "You need to input actual words"
+    elsif intersection_array.length() == 0
+      "These words are antigrams"
     elsif word_one_array.eql?(word_two_array) && inputted_words_array[0] == inputted_words_array[1].reverse()
     "These words are anagrams and palindromes"
     elsif word_one_array.eql?(word_two_array)
@@ -14,5 +18,6 @@ class String
     else
     "These words are not anagrams"
     end
+
   end
 end

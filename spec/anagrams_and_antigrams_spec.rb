@@ -18,4 +18,8 @@ describe('String#anagrams_antigrams') do
   it('checks if user inputted words') do
     expect('xyz dog'.anagrams_antigrams()).to(eq('You need to input actual words'))
   end
+
+  it('checks if words are antigrams') do
+    expect('dog cat'.anagrams_antigrams()).to(eq('These words are antigrams'))
+  end
 end
