@@ -9,6 +9,9 @@ describe('String#anagrams_antigrams') do
 
   it('checks if the inputted words are anagrams, regardless of cases') do
     expect('ALERT later'.anagrams_antigrams()).to(eq("These words are anagrams"))
+  end
 
+  it('checks if the inputted words are palindromes') do
+    expect('desserts stressed'.anagrams_antigrams()).to(eq('These words are anagrams and palindromes'))
   end
 end
