@@ -22,4 +22,8 @@ describe('String#anagrams_antigrams') do
   it('checks if words are antigrams') do
     expect('dog'.anagrams_antigrams('cat')).to(eq('These words are antigrams'))
   end
+
+  it('checks if phrases are anigrams, palindromes or antigrams') do
+    expect('How are you?'.anagrams_antigrams('Fine')).to(eq('These words are not anagrams'))
+  end
 end

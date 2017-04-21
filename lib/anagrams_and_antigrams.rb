@@ -1,7 +1,8 @@
 class String
   define_method(:anagrams_antigrams) do |input_2|
-    input_1_array = self.downcase().split("")
-    input_2_array = (input_2).downcase().split("")
+
+    input_1_array = self.gsub(/\W+/, '').downcase().split("")
+    input_2_array = (input_2).gsub(/\W+/, '').downcase().split("")
     word_one_array = input_1_array.sort()
     word_two_array = input_2_array.sort()
     intersection_array = word_one_array & word_two_array
