@@ -18,7 +18,7 @@ This is a website that takes user inputs of words or phrases and determines whet
 
 ## Setup/Installation Requirements
 
-* Visit https://github.com/moinstla/PingPong.git
+* Visit https://github.com/moinstla/Anagrams-and-Antigrams.git
 * Clone this repository
 * Open html page 'index.html' in browser
 
