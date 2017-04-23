@@ -22,7 +22,7 @@ This is a website that takes user inputs of words or phrases and determines whet
 * Clone this repository
 * Open html page 'index.html' in browser
 
-## Known Bugs
+## Known Bugs   
 
 There are no known bugs
 
